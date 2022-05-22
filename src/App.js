@@ -3,7 +3,8 @@ import './App.css';
 import Form from './components/Form';
 import NavBar from './components/NavBar';
 import { createContext, useState } from 'react';
-import NameContext from "./context/Name"
+import NameContext from "./context/NameContext";
+import AppWrapperComponent from "./AppWrapperComponent";
 
 
 function App() {
@@ -12,8 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      
-      <NameContext.Provider value={{username}}>
+      <NameContext.Provider value={{username, setUsername}}>
       <NavBar />
       <Form />
       </NameContext.Provider>
